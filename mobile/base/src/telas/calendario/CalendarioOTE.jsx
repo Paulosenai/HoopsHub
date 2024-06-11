@@ -137,7 +137,361 @@ export default function Home() {
                   
         <View style={styles.scrollContent}>
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>OTE (Playoffs)</Text>
+        <Text style={styles.sectionTitle}>OTE (Playoffs)</Text>
+        <Text style={styles.sectionTitle}>Domingo, 17 de Março 2024</Text>
+          <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/rwe.jpg'),
+                require('../../../res/img/Ote/cityheapers.jpg'),
+                'Encerrado',
+                'Final',
+                '68x71'
+              )}
+            </View>
+        <Text style={styles.sectionTitle}>Sexta-feira, 15 de Março 2024</Text>
+          <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/cityheapers.jpg'),
+                require('../../../res/img/Ote/rwe.jpg'),
+                'Encerrado',
+                'Final',
+                '76x66'
+              )}
+            </View>
+        <Text style={styles.sectionTitle}>Quinta-feira, 14 de Março 2024</Text>
+          <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/cityheapers.jpg'),
+                require('../../../res/img/Ote/rwe.jpg'),
+                'Encerrado',
+                'Final',
+                '71x78'
+              )}
+            </View>
+        <Text style={styles.sectionTitle}>Sábado, 9 de Março 2024</Text>
+          <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/rwe.jpg'),
+                require('../../../res/img/Ote/cityheapers.jpg'),
+                'Encerrado',
+                'Final',
+                '71x78'
+              )}
+            </View>
+        <Text style={styles.sectionTitle}>Sexta-feira, 8 de Março 2024</Text>
+          <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/rwe.jpg'),
+                require('../../../res/img/Ote/cityheapers.jpg'),
+                'Encerrado',
+                'Final',
+                '77x69'
+              )}
+            </View>
+          <Text style={styles.sectionTitle}>Segunda-feira, 4 de Março 2024</Text>
+          <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/coldhearts.jpg'),
+                require('../../../res/img/Ote/cityheapers.jpg'),
+                'Encerrado',
+                'Final',
+                '67x90'
+              )}
+            </View>
+          <Text style={styles.sectionTitle}>Sábado, 2 de Março 2024</Text>
+          <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/cityheapers.jpg'),
+                require('../../../res/img/Ote/coldhearts.jpg'),
+                'Encerrado',
+                'Final',
+                '85x74'
+              )}
+            </View>
+          <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/yngdreamerz.jpg'),
+                require('../../../res/img/Ote/rwe.jpg'),
+                'Encerrado',
+                'Final',
+                '77x85'
+              )}
+            </View>
+          <Text style={styles.sectionTitle}>Sexta-feira, 1 de Março 2024</Text>
+          <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/rwe.jpg'),
+                require('../../../res/img/Ote/yngdreamerz.jpg'),
+                'Encerrado',
+                'Final',
+                '103x94'
+              )}
+            </View>
+            <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/coldhearts.jpg'),
+                require('../../../res/img/Ote/cityheapers.jpg'),
+                'Encerrado',
+                'Final',
+                '92x91'
+              )}
+            </View>
+          <Text style={styles.sectionTitle}>Domingo, 25 de Fevereiro 2024</Text>
+          <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/jellyfam.jpg'),
+                require('../../../res/img/Ote/coldhearts.jpg'),
+                'Encerrado',
+                'Final',
+                '87x93'
+              )}
+            </View>
+          <Text style={styles.sectionTitle}>Sexta-feira, 23 de Fevereiro 2024</Text>
+          <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/rwe.jpg'),
+                require('../../../res/img/Ote/bluechecks.jpg'),
+                'Encerrado',
+                'Final',
+                '83x75'
+              )}
+            </View>
+            <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/coldhearts.jpg'),
+                require('../../../res/img/Ote/jellyfam.jpg'),
+                'Encerrado',
+                'Final',
+                '78x80'
+              )}
+            </View>
+          <Text style={styles.sectionTitle}>Quinta-feira, 22 de Fevereiro 2024</Text>
+          <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/jellyfam.jpg'),
+                require('../../../res/img/Ote/coldhearts.jpg'),
+                'Encerrado',
+                'Final',
+                '67x79'
+              )}
+            </View>
+            <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/bluechecks.jpg'),
+                require('../../../res/img/Ote/rwe.jpg'),
+                'Encerrado',
+                'Final',
+                '67x75'
+              )}
+            </View>
+          <Text style={styles.sectionTitle}>Terça-feira, 20 de Fevereiro 2024</Text>
+          <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/diamonddoves.jpg'),
+                require('../../../res/img/Ote/bluechecks.jpg'),
+                'Encerrado',
+                'Final',
+                '57x71'
+              )}
+            </View>
+            <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/rollingloud.jpg'),
+                require('../../../res/img/Ote/jellyfam.jpg'),
+                'Encerrado',
+                'Final',
+                '69x86'
+              )}
+            </View>
+          <Text style={styles.sectionTitle}>Sábado, 17 de Fevereiro 2024</Text>
+          <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/bluechecks.jpg'),
+                require('../../../res/img/Ote/rollingloud.jpg'),
+                'Encerrado',
+                'Final',
+                '86x60'
+              )}
+            </View>
+          <Text style={styles.sectionTitle}>Sexta-feira, 16 de Fevereiro 2024</Text>
+          <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/jellyfam.jpg'),
+                require('../../../res/img/Ote/diamonddoves.jpg'),
+                'Encerrado',
+                'Final',
+                '81x82'
+              )}
+            </View>
+          <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/rwe.jpg'),
+                require('../../../res/img/Ote/yngdreamerz.jpg'),
+                'Encerrado',
+                'Final',
+                '97x78'
+              )}
+            </View>
+          <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/coldhearts.jpg'),
+                require('../../../res/img/Ote/cityheapers.jpg'),
+                'Encerrado',
+                'Final',
+                '61x78'
+              )}
+            </View>
+          <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/jellyfam.jpg'),
+                require('../../../res/img/Ote/rollingloud.jpg'),
+                'Encerrado',
+                'Final',
+                '60x98'
+              )}
+            </View>
+          <Text style={styles.sectionTitle}>Quinta-feira, 15 de Fevereiro 2024</Text>
+          <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/bluechecks.jpg'),
+                require('../../../res/img/Ote/diamonddoves.jpg'),
+                'Encerrado',
+                'Final',
+                '70x73'
+              )}
+            </View>
+          <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/rwe.jpg'),
+                require('../../../res/img/Ote/coldhearts.jpg'),
+                'Encerrado',
+                'Final',
+                '92x82'
+              )}
+            </View>
+          <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/yngdreamerz.jpg'),
+                require('../../../res/img/Ote/cityheapers.jpg'),
+                'Encerrado',
+                'Final',
+                '91x88'
+              )}
+            </View>
+          <Text style={styles.sectionTitle}>Terça-feira, 13 de Fevereiro 2024</Text>
+          <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/rollingloud.jpg'),
+                require('../../../res/img/Ote/diamonddoves.jpg'),
+                'Encerrado',
+                'Final',
+                '81x78'
+              )}
+            </View>
+          <Text style={styles.sectionTitle}>sábado, 10 de Fevereiro 2024</Text>
+          <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/rollingloud.jpg'),
+                require('../../../res/img/Ote/rwe.jpg'),
+                'Encerrado',
+                'Final',
+                '79x74'
+              )}
+            </View>
+          <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/cityheapers.jpg'),
+                require('../../../res/img/Ote/coldhearts.jpg'),
+                'Encerrado',
+                'Final',
+                '80x86'
+              )}
+            </View>
+          <Text style={styles.sectionTitle}>sexta-feira, 9 de Fevereiro 2024</Text>
+          <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/rwe.jpg'),
+                require('../../../res/img/Ote/yngdreamerz.jpg'),
+                'Encerrado',
+                'Final',
+                '95x99'
+              )}
+            </View>
+          <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/rollingloud.jpg'),
+                require('../../../res/img/Ote/jellyfam.jpg'),
+                'Encerrado',
+                'Final',
+                '81x84'
+              )}
+            </View>
+          <Text style={styles.sectionTitle}>  Quarta-feira, 7 de Fevereiro 2024</Text>
+          <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/bluechecks.jpg'),
+                require('../../../res/img/Ote/jellyfam.jpg'),
+                'Encerrado',
+                'Final',
+                '93x85'
+              )}
+            </View>
+          <Text style={styles.sectionTitle}>sexta-feira, 2 de Fevereiro 2024</Text>
+          <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/rollingloud.jpg'),
+                require('../../../res/img/Ote/cityheapers.jpg'),
+                'Encerrado',
+                'Final',
+                '76x82'
+              )}
+            </View>
+          <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/yngdreamerz.jpg'),
+                require('../../../res/img/Ote/jellyfam.jpg'),
+                'Encerrado',
+                'Final',
+                '106x78'
+              )}
+            </View>
+          <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/diamonddoves.jpg'),
+                require('../../../res/img/Ote/rwe.jpg'),
+                'Encerrado',
+                'Final',
+                '64x85'
+              )}
+            </View>
+          <Text style={styles.sectionTitle}>Quinta-feira, 1 de Fevereiro 2024</Text>
+          <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/rwe.jpg'),
+                require('../../../res/img/Ote/rollingloud.jpg'),
+                'Encerrado',
+                'Final',
+                '88x76'
+              )}
+            </View>
+          <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/coldhearts.jpg'),
+                require('../../../res/img/Ote/bluechecks.jpg'),
+                'Encerrado',
+                'Final',
+                '79x75'
+              )}
+            </View>
+          <View style={styles.gamesContainer}>
+            {renderGameItemNba(
+                require('../../../res/img/Ote/diamonddoves.jpg'),
+                require('../../../res/img/Ote/cityheapers.jpg'),
+                'Encerrado',
+                'Final',
+                '51x58'
+              )}
+            </View>
           <Text style={styles.sectionTitle}>Sexta-feira, 29 de dezembro 2023</Text>
           <View style={styles.gamesContainer}>
             {renderGameItemNba(

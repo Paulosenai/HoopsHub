@@ -8,36 +8,42 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
       },
       fundo: {
-        marginTop: 60,
+        marginTop: 30,
         padding: 10,
-        width: 350,
-        height: 400,
+        width: 390,
+        height: 560,
       },
       tittle: {
-        fontSize: 15,
+        fontSize: 16,
+        fontWeight: 'bold',
         textAlign: 'left',
         paddingLeft: 10,
         color: 'white',
       },
-      imgLogo: {
-        width: 150,
-        height: 150,
-        marginBottom: 50,
-      },
+    
       buttonReg: {
         backgroundColor: 'black',
         borderColor: 'white',
         borderWidth: 1,
         borderRadius: 100,
         fontSize: 10,
-        width: 140,
+        width: 120,
         margin: 5,
       },
       buttonText: {
         fontWeight: "bold",
         fontSize: 17,
         color: 'white',
-        
+      },
+      remember: {
+        fontWeight: "bold",
+        fontSize: 17,
+        color: 'white',
+        margin: 10,
+        marginLeft: 11,
+        borderBottomColor: 'white',
+        width: '40%',
+        borderWidth: 1,
       },
       buttonCont: {
         backgroundColor: '#FF7A00',
@@ -52,17 +58,27 @@ const styles = StyleSheet.create({
         flexDirection: "row"
       },
       backgroundbola: {
-        height: 140,
+        height: 100,
         opacity: 0.7,
         position: 'relative',
       },
       textBall: {
         zIndex: 1,
         position: 'absolute',
-        top: 60,
+        top: 20,
         left: 330,
         color: '#FFFFFF',
         padding: 10,
+      },
+      containerImg: {
+        marginTop: 60,
+        height: '100%',
+        alignItems: "center",
+      },
+      imgLogo: {
+        resizeMode: "contain",
+        width: 200,
+        height: 200,
       }
         
 });

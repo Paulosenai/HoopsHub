@@ -20,7 +20,6 @@ const styles = StyleSheet.create({
         paddingLeft: 10,
         color: 'white',
       },
-    
       buttonReg: {
         backgroundColor: 'black',
         borderColor: 'white',
@@ -34,7 +33,6 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         fontSize: 17,
         color: 'white',
-        
       },
       buttonCont: {
         backgroundColor: '#FF7A00',

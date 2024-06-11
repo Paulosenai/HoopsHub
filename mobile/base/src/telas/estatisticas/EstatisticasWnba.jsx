@@ -51,8 +51,6 @@ export default function Estatisticas() {
       setIsSidebarOpen(false);
     };
   
-    
-    
     const playersPts = [
       { number: 1, 
         image: require('../../../res/img/Wnba/arike-ogunbowale.png'), 
@@ -384,9 +382,6 @@ export default function Estatisticas() {
         </View>
       ))}
     </View>
-
-    
-    
 
         </ScrollView>
       </SafeAreaView>

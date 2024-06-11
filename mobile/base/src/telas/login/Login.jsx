@@ -81,18 +81,18 @@ const Login = ({navigation}) =>{
               navigation.navigate('Register')}>
                 <Text style={styles.buttonText}>Cadastrar</Text>
             </Button>
-
+           
             <Button title="Entrar" color='red' onPress={handleLogin} style={styles.buttonCont}>
             <Text style={styles.buttonText}>Entrar</Text>
             </Button>
           </View>
+          <Text style={styles.remember} onPress={() => navigation.navigate('Atualizar')}>Esqueceu a senha?</Text>
+          <View style={styles.containerImg}>
+            <Image style={styles.imgLogo} source={require("../../../res/img/logo.png")} />
+          </View>
+          
 
         </View>
-      </View>
-
-      <View>
-        <Image style={styles.imgLogo} source={require("../../../res/img/logo.png")} />
-       
       </View>
       </SafeAreaView>
   );

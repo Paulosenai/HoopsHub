@@ -132,7 +132,71 @@ const userController = {
                 res.status(500).json(error);
             }
         }
-    }
+    },
+     //controller para reset 
+     getEmailReset: async(req, res)=>{
+        let{email} = req.body
+
+        email = email.toLowerCase();
+
+        try{
+            const sql = await clientController.getByEmail(email);
+
+            if(sql.length > 0){
+                res.status(200).json({msg:'Success'})
+            }
+            else{
+                res.status(404).json({msg:"Email nao cadastrado no BD"});
+            }
+        }
+        catch(error){
+            if(error){
+                res.status(500).json(error);
+            }
+        }
+    },
+
+    resetPassword: async(req, res)=>{
+        let{email,senha} = req.body
+
+        email = email.toLowerCase();
+
+        try{
+            const sql = await clientController.updatePassword(email,senha);
+            res.status(200).json({msg:"Senha Atualizada com sucesso"});
+        }
+        catch(error){
+           console.log("Erro ao redefinir a senha");
+           res.status(500).json({msg:"Erro no servidor"})
+        }
+    },
+    listAllNews: async (req, res) => {
+        try {
+            const clients = await clientController.getAllNews();
+            res.status(200).json(clients);
+        }
+        catch (error) {
+            res.status(500).json({ error: "Erro ao obter a lista de noticias" })
+        }
+    },
+
+
+    listNewsbyID: async (req, res) => {
+        try {
+            const sql = await clientController.getByIdNews(req.params.id);
+
+            if(sql.length> 0)
+            {
+                res.status(200).json(sql)
+            }
+            else{
+                res.status(401).json({msg:"Não existe registro no banco com este id"})
+            }
+        }
+        catch (error) {
+            res.status(500).json({ error: "Erro ao obter a lista de noticias" })
+        }
+    },
 };
 
 module.exports = userController;

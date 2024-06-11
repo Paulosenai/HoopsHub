@@ -25,7 +25,6 @@ const userModel = {
         return result
     },
     //Model para login
-    
     getByEmail: async (email)=>{
         const [result] = await connection.query("SELECT * FROM cadastro WHERE email=?", [email])
         .catch(erro => console.log(erro));
@@ -46,6 +45,33 @@ const userModel = {
         .catch(erro => console.log(erro));
         return result;
     },
+     //reset senha aluno
+     resetByEmail: async(email) =>{
+        const [result] = await connection.query("SELECT * FROM cadastro WHERE email=?", [email])
+        .catch(error => console.log(error))
+        return result; 
+    },
+    //update the password
+    updatePassword: async(email,senha)=>{
+        const result = await connection.query("UPDATE cadastro SET senha=? WHERE email=?",
+        [senha, email])
+        .catch(error => console.log(error))
+        return result;
+    },
+
+    getAllNews: async () => {
+        const [result] = await connection.query("SELECT * FROM noticias")
+            .catch(erro => console.log(erro));
+        return result
+    },
+
+
+    getByIdNews: async (id) => {
+        const [result] = await connection.query("SELECT * FROM noticias WHERE id =?", [id])
+            .catch(erro => console.log(erro));
+        return result
+    },
+
 };
 
 module.exports = userModel;

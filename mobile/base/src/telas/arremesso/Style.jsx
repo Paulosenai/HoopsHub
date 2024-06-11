@@ -21,6 +21,10 @@ const styles = StyleSheet.create({
         content: {
           padding: 16,
         },
+        contentCard: {
+          padding: 16,
+          height: '100%'
+        },
         title: {
           fontSize: 20,
           fontWeight: 'bold',

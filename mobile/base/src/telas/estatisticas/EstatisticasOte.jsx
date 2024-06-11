@@ -51,8 +51,7 @@ export default function Estatisticas() {
       setIsSidebarOpen(false);
     };
   
-    
-    
+
     const playersPts = [
       { number: 1, 
         image: require('../../../res/img/Ote/EliEllis.png'), 
@@ -284,7 +283,6 @@ Inscrito no Draft 2024 da NBA, anunciou o desligamento pelas redes </Text>
       ))}
     </View>
 
-
     <View style={styles.container}>
        <Text style={styles.title}>Lideres Defensivos</Text>
       <View style={styles.headerRow}>
@@ -335,9 +333,6 @@ Inscrito no Draft 2024 da NBA, anunciou o desligamento pelas redes </Text>
         </View>
       ))}
     </View>
-
-    
-    
 
         </ScrollView>
       </SafeAreaView>

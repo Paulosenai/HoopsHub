@@ -274,31 +274,36 @@ const styles = StyleSheet.create({
       position: 'absolute',
       top: 0,
       left: 0,
-      backgroundColor: 'black',
+      backgroundColor: '#191918', 
       height: '100%',
       width: 250,
       zIndex: 100,
       elevation: 5,
       paddingTop: 50,
+      transition: 'none', 
     },
     sidebarContent: {
       paddingHorizontal: 20,
+      marginTop: 20,
     },
     sidebarTitle: {
       fontSize: 24,
       fontWeight: 'bold',
       marginTop: 15,
       marginBottom: 20,
-      color: 'white',
+      color: '#f2f2f2', 
     },
     sidebarItem: {
-      paddingVertical: 10,
+      paddingVertical: 15,
       borderBottomWidth: 1,
-      borderBottomColor: 'white',
+      borderBottomColor: 'rgba(255, 255, 255, 0.2)', 
+      flexDirection: 'row',
+      alignItems: 'center', 
     },
     sidebarItemText: {
       fontSize: 18,
-      color: 'white',
+      color: '#f2f2f2',
+      flex: 1, 
     },
     closeButton: {
       position: 'absolute',
@@ -308,8 +313,8 @@ const styles = StyleSheet.create({
     },
     closeButtonText: {
       fontSize: 16,
-      color: 'white',
-      
+      color: '#f2f2f2',
+      marginTop: 20,
     },
 });
 

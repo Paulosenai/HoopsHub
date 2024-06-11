@@ -1,17 +1,22 @@
-import React, {useState} from "react";
-import {  View, SafeAreaView, ScrollView, Image, ImageBackground, TouchableOpacity } from 'react-native';
+import React, {useState , useEffect} from "react";
+import {  View, SafeAreaView, ScrollView, Image, ImageBackground, TouchableOpacity, FlatList, Form, Input } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Text, Header,} from '@rneui/themed';
 import styles from "./Styles";
+import axios from 'axios'
 
 
-export default function Home() {
+export default function Home({ route}) {
+
+const navigation = useNavigation()
+
   const Sidebar = ({ isOpen, onClose }) => {
     const navigation = useNavigation();
     const navigateToScreen = (screenName) => {
       navigation.navigate(screenName);
       onClose(); 
-  }
+  };
+
     return (
       <View style={[styles.sidebarContainer, { transform: [{ translateX: isOpen ? 0 : -300 }] }]}>
       <TouchableOpacity onPress={onClose} style={styles.closeButton}>
@@ -43,8 +48,6 @@ export default function Home() {
     setIsSidebarOpen(false);
   };
 
-  
-  
   const renderGameOTE = (team1Logo, team2Logo, time, subtitle, score) => (
     <View style={styles.gameContainerOTE}>
       <View style={styles.gameItemOTE}>
@@ -58,6 +61,42 @@ export default function Home() {
       </View>
     </View>
   );
+
+  const [data, setData] = useState([]);
+  
+      useEffect(()=>{
+          axios.get(`http://10.0.2.2:8085/api/readNews`)
+          .then(response =>{
+              //Ordenar os dados pelo id em ordem crescente
+              const sortData= response.data.sort((a,b) => a.id - b.id);
+              setData(sortData);
+  
+          })
+          .catch(error => {
+              console.log(JSON.stringify(error));
+          });
+          console.log(data)
+      },[]);
+
+      const handleVizualizar = (id) =>{
+        navigation.navigate('Noticias', {id})
+    };
+      
+      const renderItem = ({item})=> (
+        <View style={styles.item}> 
+               <View style={styles.card}>
+                  <Image source={require("../../../res/img/Nba/playoffsCard.jpg")} 
+                  style={styles.image} />
+                  <View style={styles.content}>
+                  <TouchableOpacity onPress={()=> handleVizualizar(item.id)}>
+                  <Text style={styles.title}>{item.title}</Text>
+                  <Text style={styles.description}>{item.description}</Text>
+                  </TouchableOpacity>
+                </View>
+               </View>
+        </View> 
+    );
+
     return (
       <SafeAreaView style={styles.container}>
       
@@ -109,30 +148,12 @@ export default function Home() {
                       </View> 
                 </View>
 
-                <View style={styles.card}>
-                  <Image source={require("../../../res/img/Nba/Embiid.jpg")} style={styles.image} />
-                  <View style={styles.content}>
-                  <Text style={styles.title}>Joel Embiid surpreende o mundo do basquete ao revelar paralisia</Text>
-                  <Text style={styles.description}>Apesar do problema sério, camaronês anotou 50 pontos na última partida da NBA</Text>
-                </View>
-               </View>
-
-                <View style={styles.card}>
-                  <Image source={require("../../../res/img/Nba/Scala.png")} style={styles.image} />
-                  <View style={styles.content}>
-                  <Text style={styles.title}>Scala, o “Panda” do Sesi Franca, conquista torcida por deixar tudo em quadra a cada jogo</Text>
-                  <Text style={styles.description}>Armador argentino do Sesi Franca, que carrega o apelido desde bebê e fez até uma tatuagem do urso, vive sua melhor temporada no NBB CAIXA 2023/24</Text>
-                </View>
-               </View>
-
-                <View style={styles.card}>
-                  <Image source={require("../../../res/img/Nba/amt-f39d1kamillaCardoso.jpg")} style={styles.image} />
-                  <View style={styles.content}>
-                  <Text style={styles.title}>Pivô brasileira Kamilla Cardoso anuncia inscrição no Draft da WNBA</Text>
-                  <Text style={styles.description}>Estrela do basquete brasileiro pode se tornar uma das escolhas do evento do dia 15 de abril, em Nova York</Text>
-                </View>
-               </View>
-
+                 <FlatList
+                   data={data}
+                   renderItem={renderItem}
+                   keyExtractor={item => String(item.id)}
+                   />
+             
                <View style={styles.sectionOTE}>         
                       <View style={styles.gamesContainer}>
                         {renderGameOTE(
@@ -144,9 +165,6 @@ export default function Home() {
                         )}
                       </View> 
                       </View> 
-                
-
-               
 
                <View style={styles.containerNBA}>
       <View style={styles.mainCardNBA}>
@@ -157,16 +175,11 @@ export default function Home() {
         <Text style={styles.mainCardTitleNBA}>Nba</Text>
       </View>
 
-      <View style={styles.card}>
-        <Image
-          source={require('../../../res/img/Nba/curry.jpg')}
-          style={styles.image}
-        />
-         <View style={styles.content}>
-          <Text style={styles.title}>Steph Curry é eleito o mais decisivo da temporada regular em votação acirrada na NBA</Text>
-          <Text style={styles.description}>Se o ano do Golden State Warriors não deixou boas recordações à torcida na NBA, para Stephen Curry, pelo menos, rendeu mais uma honraria no melhor basquete do mundo.</Text>
-        </View>
-      </View>
+      <FlatList
+                   data={data}
+                   renderItem={renderItem}
+                   keyExtractor={item => String(item.id)}
+                   />
 
       <View style={styles.card}>
         <Image

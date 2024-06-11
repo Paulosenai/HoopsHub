@@ -387,9 +387,6 @@ export default function Estatisticas({ navigation }) {
       ))}
     </View>
 
-    
-    
-
         </ScrollView>
       </SafeAreaView>
   );
